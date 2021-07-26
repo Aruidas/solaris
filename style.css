@@ -12,10 +12,16 @@ ul {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 h1 {
     font-size: 3rem;
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 .center-container {
@@ -30,12 +36,19 @@ h1 {
     align-items: center;
 }
 
+.anchor {
+    position: relative;
+    top: -200px;
+    visibility: hidden;
+}
+
 /* NAVIGATION */
 .nav-header {
     justify-content: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 9;
+    width: 100%;
     height: 140px;
     font-size: 1.2rem;
     background: #fff;
@@ -46,7 +59,7 @@ h1 {
 }
 
 #nav-logo img {
-    height: 50px;
+    height: 80px;
 }
 
 #hamburger {
@@ -55,10 +68,6 @@ h1 {
 
 #nav-menu {
     gap: 20px;
-}
-
-#nav-menu li.current {
-    box-shadow: 0 2px #2865ff;
 }
 
 #nav-menu a {
@@ -74,17 +83,18 @@ h1 {
 }
 
 /* HERO */
-section#home {
+section.home {
     height: 100vh;
+    margin-bottom: 100px;
     background-image: url("img/bg_hero.jpg");
     background-size: cover;
 }
 
-section#home .center-container {
+section.home .center-container {
     padding-top: 200px;
 }
 
-section#home .center-container div {
+section.home .center-container div {
     margin: 0 0 0 auto;
     max-width: 600px;
     padding: 20px;
@@ -95,12 +105,16 @@ section#home .center-container div {
 }
 
 /* NEWS */
-section#news .center-container > .flex-container {
+section.news {
+    margin-bottom: 100px;
+}
+
+section.news .center-container > .flex-container {
     justify-content: center;
     gap: 50px;
 }
 
-section#news .center-container > .flex-container > div {
+section.news .center-container > .flex-container > div {
     max-width: 360px;
     border: solid 2px #2865ff;
     border-radius: 5px;
@@ -108,8 +122,40 @@ section#news .center-container > .flex-container > div {
     overflow: hidden;
 }
 
-section#news img {
+section.news img {
     width: 100%;
+}
+
+/* CONTACTS */
+section.contacts {
+    margin-bottom: 100px;
+}
+
+section.contacts > .center-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+section.contacts > .center-container > div {
+    padding: 50px 40px;
+}
+
+section.contacts h2 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2865ff;
+}
+
+section.contacts i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+section.contacts h4 {
+    color: #2865ff;
 }
 
 /* FOOTER */
@@ -125,6 +171,12 @@ footer a {
     font-size: 1.5rem;
     padding: 0 8px;
     color: #2865ff;
+}
+
+@media screen and (min-width: 1024px) {
+    #nav-menu li.current {
+        box-shadow: 0 2px #2865ff; /* Highlight link in desktop view only */
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -161,21 +213,21 @@ footer a {
         left: 0;
         z-index: -1;
         width: 100%;
-        transition: all 0.5s ease;
+        transition: all 0.5s;
         background: #fff;
     }
 
-    #nav-menu.mobile {
+    #nav-menu.open {
         top: 100%;
-        transition: all 0.5s ease;
+        transition: 0.5s all;
     }
 
     #nav-menu li {
-        padding-bottom: 50px;
+        margin-bottom: 50px;
     }
 
     #nav-menu a {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }

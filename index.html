@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Technologies - Solaris</title>
     <meta name="description" content="Solaris's Official Website">
-    <!-- <script src="https://kit.fontawesome.com/3ed6ace440.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/3ed6ace440.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,15 +18,16 @@
                 <span class="bar"></span>
             </div>
             <ul class="flex-container" id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#contacts">Contacts</a></li>
+                <li class="current"><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#news" onclick="closeMobileMenu()">News</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About us</a></li>
+                <li><a href="#contacts" onclick="closeMobileMenu()">Contacts</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home">
+    <section class="home">
+        <a class="anchor" id="home"></a>
         <div class="center-container">
             <div>
                 <h1>Solaris</h1>
@@ -35,7 +36,8 @@
         </div>
     </section>
 
-    <section id="news">
+    <section class="news">
+        <a class="anchor" id="news"></a>
         <div class="center-container">
             <h2>Latest news</h2>
             <div class="flex-container">
@@ -67,6 +69,33 @@
         </div>
     </section>
 
+    <section class="contacts">
+        <a class="anchor" id="contacts"></a>
+        <div class="center-container">
+            <div>
+                <h2>Contact us</h4>
+            </div>
+            <div>
+                <i class="fas fa-map-marked-alt"></i>
+                <h4>Location</h4>
+                <p>Location: 575 Crescent Avenue<br>
+                    Quakertown, PA 18951</p>
+            </div>
+            <div>
+                <i class="fas fa-phone-alt"></i>
+                <h4>Phone no.</h4>
+                <p>Mobile: <a href="tel:+43253312523">+432 533 12 523</a><br>
+                    Fax: <a href="fax:+53222212523">+532 222 12 523</a></p>
+            </div>
+            <div>
+                <i class="far fa-paper-plane"></i>
+                <h4>E-mail</h4>
+                <p>Info: <a href="mailto:info@domain.com">info@domain.com</a><br>
+                    CEO: <a href="mailto:ceo@domain.com">ceo@domain.com</a></p>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <div class="center-container flex-container">
             <div><p>© 2021 Solaris</p></div>

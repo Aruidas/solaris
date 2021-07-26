@@ -3,11 +3,11 @@ const navMenu = document.getElementById("nav-menu");
 
 function toggleMenu() {
     hamburger.classList.toggle("hamburger-active");
-    navMenu.classList.toggle("mobile");
+    navMenu.classList.toggle("open");
 }
 
 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll(".anchor");
 const listItems = document.querySelectorAll("#nav-menu li");
 
 window.addEventListener("scroll", ()=> {
@@ -16,7 +16,7 @@ window.addEventListener("scroll", ()=> {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if(pageYOffset >= sectionTop - 200) { // -200: offset, to highlight links earlier
+        if(pageYOffset >= sectionTop - 50) { // -X: offset, to highlight links earlier
             currentSection = section.getAttribute("id");
         }
     })
@@ -28,3 +28,8 @@ window.addEventListener("scroll", ()=> {
         }
     })
 })
+
+function closeMobileMenu() {
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.remove("open");
+}
