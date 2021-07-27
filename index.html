@@ -1,113 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Solar Technologies - Solaris</title>
-    <meta name="description" content="Solaris's Official Website">
-    <script src="https://kit.fontawesome.com/3ed6ace440.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <meta name='description' content='Solaris's Official Website'>
+    <script src='https://kit.fontawesome.com/3ed6ace440.js' crossorigin='anonymous'></script>
+    <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-    <nav class="nav-header flex-container">
-        <div class="center-container flex-container">
-            <a href="#home" id="nav-logo"><img src="img/logo-solaris.png" alt="Solaris logo"></a>
-            <div id="hamburger" onclick="toggleMenu()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <nav class='nav-header flex-container'>
+        <div class='center-container flex-container'>
+            <a href='#home' id='nav-logo'><img src='img/logo-solaris.png' alt='Solaris logo'></a>
+            <div id='hamburger' onclick='toggleMenu()'>
+                <span class='bar'></span>
+                <span class='bar'></span>
+                <span class='bar'></span>
             </div>
-            <ul class="flex-container" id="nav-menu">
-                <li class="current"><a href="#home" onclick="closeMobileMenu()">Home</a></li>
-                <li><a href="#news" onclick="closeMobileMenu()">News</a></li>
-                <li><a href="#about" onclick="closeMobileMenu()">About us</a></li>
-                <li><a href="#contacts" onclick="closeMobileMenu()">Contacts</a></li>
+            <ul class='flex-container' id='nav-menu'>
+                <li class='current'><a href='#home' onclick='closeMobileMenu()'>Home</a></li>
+                <li><a href='#news' onclick='closeMobileMenu()'>News</a></li>
+                <li><a href='#about' onclick='closeMobileMenu()'>About us</a></li>
+                <li><a href='#contacts' onclick='closeMobileMenu()'>Contacts</a></li>
+                <li><button onclick='toggleTheme.call(this)'><i class='fas fa-moon'></i></button></li>
             </ul>
         </div>
     </nav>
 
-    <section class="home">
-        <a class="anchor" id="home"></a>
-        <div class="center-container">
+    <section class='home'>
+        <a class='anchor' id='home'></a>
+        <div class='center-container'>
             <div>
                 <h1>Solaris</h1>
                 <p>Solar technologies for a brighter future.</p>
+                <button onclick='expandText.call(this)'>Read more</button>
+                <p class='collapsible-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
     </section>
 
-    <section class="news">
-        <a class="anchor" id="news"></a>
-        <div class="center-container">
+    <section class='news'>
+        <a class='anchor' id='news'></a>
+        <div class='center-container'>
             <h2>Latest news</h2>
-            <div class="flex-container">
+            <div class='flex-container'>
                 <div>
-                    <img src="img/bg_hero.jpg" alt="Article #1">
+                    <img src='img/bg_hero.jpg' alt='Article #1'>
                     <h5>5 Amazing and Easy Tips for Sustainable Business Success</h5>
                     <p>At vero eos et accusamus et iusto odio dignissimos ducims…</p>
                     <div>
-                        <a href="#"><b>Read more</b></a>
+                        <a href='#'><b>Read more</b></a>
                     </div>
                 </div>
                 <div>
-                    <img src="img/bg_hero.jpg" alt="Article #2">
+                    <img src='img/bg_hero.jpg' alt='Article #2'>
                     <h5>Assessing the Maturity of Your Data Management in Industry</h5>
                     <p>At vero eos et accusamus et iusto odio dignissimos ducims…</p>
                     <div>
-                        <a href="#"><b>Read more</b></a>
+                        <a href='#'><b>Read more</b></a>
                     </div>
                 </div>
                 <div>
-                    <img src="img/bg_hero.jpg" alt="Article #3">
+                    <img src='img/bg_hero.jpg' alt='Article #3'>
                     <h5>How to Build Your Sustainable Business Strategy</h5>
                     <p>At vero eos et accusamus et iusto odio dignissimos ducims…</p>
                     <div>
-                        <a href="#"><b>Read more</b></a>
+                        <a href='#'><b>Read more</b></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contacts">
-        <a class="anchor" id="contacts"></a>
-        <div class="center-container">
+    <section class='about'>
+        <div class='center-container'>
+            <a class='anchor' id='about'></a>
+            <h2>About us</h4>
+            <img src='img/bg_about.jpg' alt='Solar panels'>
+        </div>
+    </section>
+
+    <section class='contacts'>
+        <a class='anchor' id='contacts'></a>
+        <div class='center-container'>
             <div>
                 <h2>Contact us</h4>
             </div>
             <div>
-                <i class="fas fa-map-marked-alt"></i>
+                <i class='fas fa-map-marked-alt'></i>
                 <h4>Location</h4>
                 <p>Location: 575 Crescent Avenue<br>
                     Quakertown, PA 18951</p>
             </div>
             <div>
-                <i class="fas fa-phone-alt"></i>
+                <i class='fas fa-phone-alt'></i>
                 <h4>Phone no.</h4>
-                <p>Mobile: <a href="tel:+43253312523">+432 533 12 523</a><br>
-                    Fax: <a href="fax:+53222212523">+532 222 12 523</a></p>
+                <p>Mobile: <a href='tel:+43253312523'>+432 533 12 523</a><br>
+                    Fax: <a href='fax:+53222212523'>+532 222 12 523</a></p>
             </div>
             <div>
-                <i class="far fa-paper-plane"></i>
+                <i class='far fa-paper-plane'></i>
                 <h4>E-mail</h4>
-                <p>Info: <a href="mailto:info@domain.com">info@domain.com</a><br>
-                    CEO: <a href="mailto:ceo@domain.com">ceo@domain.com</a></p>
+                <p>Info: <a href='mailto:info@domain.com'>info@domain.com</a><br>
+                    CEO: <a href='mailto:ceo@domain.com'>ceo@domain.com</a></p>
             </div>
         </div>
     </section>
     
     <footer>
-        <div class="center-container flex-container">
+        <div class='center-container flex-container'>
             <div><p>© 2021 Solaris</p></div>
             <nav>
-                <a href="https://www.linkedin.com/in/audrius-arlauskas/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-reddit-alien"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href='https://www.linkedin.com/in/audrius-arlauskas/'><i class='fab fa-linkedin-in'></i></a>
+                <a href='#'><i class='fab fa-reddit-alien'></i></a>
+                <a href='#'><i class='fab fa-facebook-f'></i></a>
+                <a href='#'><i class='fab fa-instagram'></i></a>
             </nav>
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src='app.js'></script>
 </body>
 </html>

@@ -1,9 +1,26 @@
+:root {
+    --colorDark: #131313;
+    --colorPrimary: #2865ff;
+    --colorLight: #fff;
+    --colorHighlight: #6691fd;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    color: var(--colorDark);
     scroll-behavior: smooth;
+}
+
+body {
+    background: var(--colorLight);
+}
+
+button {
+    border: none;
+    cursor: pointer;
 }
 
 ul {
@@ -12,7 +29,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--colorDark);
 }
 
 h1 {
@@ -50,8 +67,7 @@ h4 {
     z-index: 9;
     width: 100%;
     height: 140px;
-    font-size: 1.2rem;
-    background: #fff;
+    background: var(--colorLight);
 }
 
 .nav-header > .center-container {
@@ -70,22 +86,27 @@ h4 {
     gap: 20px;
 }
 
-#nav-menu a {
+#nav-menu a, #nav-menu button, #nav-menu button i {
+    font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
-    color: #2865ff;
+    color: var(--colorPrimary);
+    background: none;
     transition: 0.4s;
 }
 
 #nav-menu a:hover {
-    color: #6691fd;
+    color: var(--colorHighlight);
     transition: 0.4s;
 }
 
 /* HERO */
+section {
+    margin-bottom: 100px;
+}
+
 section.home {
     height: 100vh;
-    margin-bottom: 100px;
     background-image: url("img/bg_hero.jpg");
     background-size: cover;
 }
@@ -99,16 +120,31 @@ section.home .center-container div {
     max-width: 600px;
     padding: 20px;
     font-size: 1.2rem;
-    color: #fff;
     background-color: #6591ff33;
     border-radius: 10px;
 }
 
-/* NEWS */
-section.news {
-    margin-bottom: 100px;
+section.home .center-container div * {
+    color: var(--colorLight);
 }
 
+section.home p:first-of-type {
+    margin-bottom: 20px;
+}
+
+section.home button {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: var(--colorLight);
+    border-radius: 5px;
+    background: var(--colorHighlight);
+}
+
+.collapsible-text {
+    display: none;
+}
+
+/* NEWS */
 section.news .center-container > .flex-container {
     justify-content: center;
     gap: 50px;
@@ -116,7 +152,7 @@ section.news .center-container > .flex-container {
 
 section.news .center-container > .flex-container > div {
     max-width: 360px;
-    border: solid 2px #2865ff;
+    border: solid 2px var(--colorPrimary);
     border-radius: 5px;
     height: 480px;
     overflow: hidden;
@@ -127,10 +163,6 @@ section.news img {
 }
 
 /* CONTACTS */
-section.contacts {
-    margin-bottom: 100px;
-}
-
 section.contacts > .center-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -146,7 +178,7 @@ section.contacts h2 {
     transform: translateY(-50%);
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2865ff;
+    color: var(--colorPrimary);
 }
 
 section.contacts i {
@@ -155,7 +187,7 @@ section.contacts i {
 }
 
 section.contacts h4 {
-    color: #2865ff;
+    color: var(--colorPrimary);
 }
 
 /* FOOTER */
@@ -170,12 +202,12 @@ footer .center-container {
 footer a {
     font-size: 1.5rem;
     padding: 0 8px;
-    color: #2865ff;
+    color: var(--colorPrimary);
 }
 
 @media screen and (min-width: 1024px) {
     #nav-menu li.current {
-        box-shadow: 0 2px #2865ff; /* Highlight link in desktop view only */
+        box-shadow: 0 2px var(--colorPrimary); /* Highlight link in desktop view only */
     }
 }
 
@@ -191,7 +223,7 @@ footer a {
         height: 4px;
         margin: 4px 0;
         border-radius: 2px;
-        background: #2865ff;
+        background: var(--colorPrimary);
     }
 
     #hamburger.hamburger-active .bar:nth-child(2) {
@@ -214,7 +246,7 @@ footer a {
         z-index: -1;
         width: 100%;
         transition: all 0.5s;
-        background: #fff;
+        background: var(--colorLight);
     }
 
     #nav-menu.open {
