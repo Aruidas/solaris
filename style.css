@@ -36,6 +36,12 @@ h1 {
     font-size: 3rem;
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
 h4 {
     margin-bottom: 10px;
     font-size: 1.2rem;
@@ -86,18 +92,26 @@ h4 {
     gap: 20px;
 }
 
+#nav-menu li {
+    padding: 5px 0;
+}
+
+#nav-menu li.current {
+    box-shadow: 0 2px var(--colorPrimary);
+}
+
 #nav-menu a, #nav-menu button, #nav-menu button i {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: var(--colorPrimary);
     background: none;
-    transition: 0.4s;
+    transition: 0.4s color;
 }
 
 #nav-menu a:hover {
     color: var(--colorHighlight);
-    transition: 0.4s;
+    transition: 0.4s color;
 }
 
 /* HERO */
@@ -115,17 +129,17 @@ section.home .center-container {
     padding-top: 200px;
 }
 
-section.home .center-container div {
+section.home > .center-container > div {
     margin: 0 0 0 auto;
     max-width: 600px;
     padding: 20px;
     font-size: 1.2rem;
-    background-color: #6591ff33;
     border-radius: 10px;
+    background-color: #6591ff51;
 }
 
 section.home .center-container div * {
-    color: var(--colorLight);
+    color: #fff;
 }
 
 section.home p:first-of-type {
@@ -145,16 +159,22 @@ section.home button {
 }
 
 /* NEWS */
+section.news h2 {
+    color: var(--colorPrimary);
+}
+
 section.news .center-container > .flex-container {
+    align-items: stretch;
     justify-content: center;
     gap: 50px;
 }
 
-section.news .center-container > .flex-container > div {
-    max-width: 360px;
+section.news > .center-container > .flex-container > div {
+    flex: 1 1;
+    /* max-width: 360px; */
     border: solid 2px var(--colorPrimary);
     border-radius: 5px;
-    height: 480px;
+    /* height: 480px; */
     overflow: hidden;
 }
 
@@ -162,22 +182,32 @@ section.news img {
     width: 100%;
 }
 
+/* ABOUT US */
+section.about h2 {
+    color: var(--colorPrimary);
+}
+
+section.about > .center-container > .flex-container {
+    align-items: flex-start;
+    gap: 40px;
+}
+
 /* CONTACTS */
 section.contacts > .center-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 section.contacts > .center-container > div {
-    padding: 50px 40px;
+    /* padding: 50px 40px; */
+    /* border: solid 1px; */
 }
 
 section.contacts h2 {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2.5rem;
-    font-weight: 700;
     color: var(--colorPrimary);
 }
 
@@ -202,16 +232,13 @@ footer .center-container {
 footer a {
     font-size: 1.5rem;
     padding: 0 8px;
+}
+
+footer a i {
     color: var(--colorPrimary);
 }
 
-@media screen and (min-width: 1024px) {
-    #nav-menu li.current {
-        box-shadow: 0 2px var(--colorPrimary); /* Highlight link in desktop view only */
-    }
-}
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
     #hamburger {
         display: block;
         cursor: pointer;
@@ -245,21 +272,38 @@ footer a {
         left: 0;
         z-index: -1;
         width: 100%;
-        transition: all 0.5s;
+        transition: 0.5s top ease-in-out;
         background: var(--colorLight);
     }
 
     #nav-menu.open {
         top: 100%;
-        transition: 0.5s all;
+        transition: 0.5s top ease-in-out;
     }
 
     #nav-menu li {
         margin-bottom: 50px;
     }
 
+    #nav-menu li.current {
+        box-shadow: none; /* Disables link highlighting in mobile view */
+    }
+
     #nav-menu a {
         text-align: center;
         font-size: 1.5rem;
+    }
+
+    section.home > .center-container > div {
+        max-width: unset;
+    }
+
+    section.news > .center-container > .flex-container, section.about > .center-container > .flex-container  {
+        flex-direction: column;
+    }
+
+    section.contacts > .center-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
